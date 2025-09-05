@@ -94,3 +94,15 @@ footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
   .timeline-item::before { left:50%; transform:translateX(-50%); }
   .tracks { grid-template-columns:1fr; gap:20px; }
 }
+/* Neon glow effect on track hover */
+.track-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 8px #00ffea,
+    0 0 16px #00ffea,
+    0 0 24px #00ffea,
+    0 0 32px #00ffea,
+    0 0 48px #00ffea;
+}
+
+
