@@ -15,21 +15,25 @@ body {
 
 /* Navbar */
 .navbar {
-  position: fixed; top:0; left:0; width:100%; display:flex; justify-content:center;
-  align-items:center; padding:10px 40px; background: rgba(0,0,0,0.6); z-index:999;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 40px; /* reduced height */
+  background: rgba(0,0,0,0.6);
+  z-index:999;
   transition: top 0.3s;
 }
-.navbar.hidden { top:-80px; } /* scroll hide */
-.navbar .logo.center-title {
-  position:absolute; left:50%; transform:translateX(-50%);
-  font-size:1.8rem; font-weight:700; color:#f3b3c3;
-}
+.navbar .logo { font-size:1.8rem; font-weight:700; color:#f3b3c3; }
 .navbar ul { list-style:none; display:flex; gap:30px; }
 .navbar a { text-decoration:none; color:#fff; font-weight:500; transition:color .3s; }
 .navbar a:hover { color:#f3b3c3; }
 
 /* Hero Section */
-.hero { position: relative; height:100vh; overflow:hidden; display:flex; align-items:center; margin-top:60px; }
+.hero { position: relative; height:100vh; overflow:hidden; display:flex; align-items:center; margin-top:65px; }
 .bg-video { position:absolute; top:0; left:0; width:auto; height:auto; min-width:100%; min-height:100%; z-index:0; }
 .hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.35); z-index:1; }
 .hero-content.split {
