@@ -15,4 +15,3 @@ fetch("tracks.json")
     });
   })
   .catch(console.error);
-
