@@ -21,6 +21,12 @@
       <li><a href="#timeline">Timeline</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <!-- Hamburger Menu -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 
   <!-- Hero -->
@@ -132,7 +138,17 @@
     <p>© 2025 RawSha. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="app.js"></script>
-  <script src="navbar.js"></script>
+  <script>
+    // Navbar Hamburger Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

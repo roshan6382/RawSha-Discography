@@ -10,3 +10,14 @@ window.addEventListener('scroll', function() {
   }
   lastScrollTop = st <= 0 ? 0 : st;
 }, false);
+
+const hamburger = document.createElement("div");
+hamburger.classList.add("hamburger");
+hamburger.innerHTML = `<span></span><span></span><span></span>`;
+document.querySelector(".navbar").appendChild(hamburger);
+
+const navLinks = document.querySelector(".nav-links");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
