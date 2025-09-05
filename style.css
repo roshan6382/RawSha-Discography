@@ -88,6 +88,23 @@ footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
     0 0 32px #00ffea,
     0 0 48px #00ffea;
 }
+/* Neon glow effect on timeline hover */
+.timeline-item:hover .timeline-content {
+  animation: neonPulse 0.6s ease-in-out infinite alternate;
+  box-shadow:
+    0 0 8px #00ffea,
+    0 0 16px #00ffea,
+    0 0 24px #00ffea,
+    0 0 32px #00ffea;
+}
+
+/* Neon pulse animation */
+@keyframes neonPulse {
+  0% { transform: translateY(0); box-shadow: 0 0 8px #00ffea; }
+  50% { transform: translateY(-5px); box-shadow: 0 0 16px #00ffea, 0 0 24px #00ffea; }
+  100% { transform: translateY(0); box-shadow: 0 0 8px #00ffea, 0 0 16px #00ffea; }
+}
+
 
 /* Animations */
 @keyframes fadeInLeft { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
@@ -104,6 +121,7 @@ footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
   .timeline-item::before { left:50%; transform:translateX(-50%); }
   .tracks { grid-template-columns:1fr; gap:20px; }
 }
+
 
 
 
