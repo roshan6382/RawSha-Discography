@@ -52,7 +52,15 @@ h2 { text-align:center; color:#00ffea; margin-bottom:40px; font-size:2.2rem; fon
 /* Tracks */
 .tracks { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; }
 .track-card { background: rgba(255,255,255,0.03); padding:20px; border-radius:16px; transition:transform .3s, box-shadow .3s; }
-.track-card:hover { transform:translateY(-8px); box-shadow:0 8px 30px rgba(0,0,0,0.5); }
+.track-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 8px #00ffea,
+    0 0 16px #00ffea,
+    0 0 24px #00ffea,
+    0 0 32px #00ffea,
+    0 0 48px #00ffea;
+}
 .track-card img { width:100%; border-radius:12px; margin-bottom:12px; }
 .track-card h3 { font-size:1.2rem; margin-bottom:6px; color:#f3b3c3; }
 .track-card a { color:#00ffea; font-size:0.9rem; text-decoration:none; }
@@ -65,29 +73,15 @@ h2 { text-align:center; color:#00ffea; margin-bottom:40px; font-size:2.2rem; fon
 /* Timeline */
 .timeline-container { position:relative; padding:20px 0; }
 .timeline-container::before { content:''; position:absolute; top:0; left:50%; width:4px; height:100%; background:#00ffea; transform:translateX(-50%); }
-.timeline-item { position:relative; width:50%; padding:20px 40px; box-sizing:border-box; }
+.timeline-item { position:relative; width:50%; padding:20px 40px; box-sizing:border-box; transition:all .3s ease; }
 .timeline-item.left { left:0; text-align:right; }
 .timeline-item.right { left:50%; }
-.timeline-item::before { content:''; position:absolute; top:20px; width:20px; height:20px; background:#00ffea; border-radius:50%; border:3px solid #111; }
+.timeline-item::before { content:''; position:absolute; top:20px; width:20px; height:20px; background:#00ffea; border-radius:50%; border:3px solid #111; transition: all .3s ease; }
 .timeline-item.left::before { right:-10px; }
 .timeline-item.right::before { left:-10px; }
 .timeline-item .timeline-year { font-weight:700; margin-bottom:6px; color:#f3b3c3; }
-.timeline-item .timeline-content { background: rgba(255,255,255,0.05); padding:12px 18px; border-radius:12px; display:inline-block; }
+.timeline-item .timeline-content { background: rgba(255,255,255,0.05); padding:12px 18px; border-radius:12px; display:inline-block; transition: all .3s ease; }
 
-/* Contact & Footer */
-.contact p { text-align:center; margin:8px 0; font-size:1rem; }
-.contact a { color:#f3b3c3; text-decoration:none; font-weight:500; }
-footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
-/* Neon glow effect on track hover */
-.track-card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 0 8px #00ffea,
-    0 0 16px #00ffea,
-    0 0 24px #00ffea,
-    0 0 32px #00ffea,
-    0 0 48px #00ffea;
-}
 /* Neon glow effect on timeline hover */
 .timeline-item:hover .timeline-content {
   animation: neonPulse 0.6s ease-in-out infinite alternate;
@@ -105,6 +99,10 @@ footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
   100% { transform: translateY(0); box-shadow: 0 0 8px #00ffea, 0 0 16px #00ffea; }
 }
 
+/* Contact & Footer */
+.contact p { text-align:center; margin:8px 0; font-size:1rem; }
+.contact a { color:#f3b3c3; text-decoration:none; font-weight:500; }
+footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
 
 /* Animations */
 @keyframes fadeInLeft { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
@@ -121,8 +119,3 @@ footer { text-align:center; padding:20px; color:#aaa; font-size:0.9rem; }
   .timeline-item::before { left:50%; transform:translateX(-50%); }
   .tracks { grid-template-columns:1fr; gap:20px; }
 }
-
-
-
-
-
