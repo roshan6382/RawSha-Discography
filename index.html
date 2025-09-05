@@ -3,115 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RawSha | Beats & Rhymes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <title>RawSha | Southside Hip-Hop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Particle Canvas -->
   <canvas id="particle-canvas"></canvas>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">RawSha</div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#music">Music</a></li>
-      <li><a href="#fan-wall">Fan Wall</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Navigation -->
+  <header class="navbar">
+    <h1 class="site-title">RawSha</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#fan-wall">Fans</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <header id="hero" class="hero">
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
     <video autoplay muted loop playsinline class="bg-video">
       <source src="djvid (online-video-cutter.com).mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
-    <div class="hero-overlay"></div>
     <div class="hero-content split">
       <div class="bio-text">
-        <h1 class="bio-title">RawSha | Rhythm & Rhymes</h1>
-        <p class="tagline">Producer · Rapper · Genre Bender</p>
-        <div class="bio-box">
-          <p>
-            From Vadakara, Kerala, RawSha started playing multiple instruments in his childhood.<br>
-            Producing beats, recording rap tracks, and blending genres,<br>
-            he’s crafting a raw, authentic sound that resonates across India.
-          </p>
-        </div>
+        <h2>RawSha</h2>
+        <p>Producer · Rapper · Genre Bender from Vadakara, Kerala.  
+        Crafting Southside vibes, blending hip-hop with unique sounds,  
+        and creating music that tells raw stories.</p>
       </div>
       <div class="bio-pic-wrapper">
         <img src="bio pic.png" alt="RawSha" class="profile-pic">
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Music -->
+  <!-- Music Section -->
   <section id="music" class="section music">
     <h2>Latest Tracks</h2>
     <div id="tracks-container" class="tracks"></div>
-  </section>
 
-  <!-- Spotify Player -->
-  <section id="player" class="section player">
-    <h2>Play Now</h2>
     <div class="embed-wrap">
+      <h3>Play Now</h3>
       <iframe src="https://open.spotify.com/embed/track/0pAS2hUoXOjD9yEez7MTLI?utm_source=generator"
         width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         style="border-radius:12px;"></iframe>
     </div>
   </section>
 
-  <!-- Fan Wall -->
-  <section id="fan-wall" class="section fan-wall">
-    <h2>Fan Wall</h2>
-    <div class="carousel-wrapper">
-      <div class="carousel-track">
-        <div class="slide">“RawSha’s energy is unmatched 🔥”</div>
-        <div class="slide">“Every track feels like a story.”</div>
-        <div class="slide">“Limitless vibes. True inspiration.”</div>
-        <div class="slide">“Hip-hop with soul. Respect.”</div>
-        <div class="slide">“Tracks hit hard, flow is smooth.”</div>
-        <div class="slide">“Southside hero, love the vibe.”</div>
-      </div>
+  <!-- Timeline Section -->
+  <section id="timeline" class="section timeline">
+    <h2>Timeline</h2>
+    <div class="timeline-line"></div>
+    <div class="timeline-item left">
+      <span class="year">2024</span>
+      <p>Released <strong>KadhaKali</strong> & <strong>Thiripp</strong></p>
+    </div>
+    <div class="timeline-item right">
+      <span class="year">2025</span>
+      <p>Released <strong>Kedann Pedayalle</strong> with 60,000+ streams</p>
     </div>
   </section>
 
-  <!-- Timeline -->
-  <section id="timeline" class="section timeline">
-    <h2>Timeline</h2>
-    <div class="timeline-container">
-      <div class="timeline-item left">
-        <div class="timeline-year">2015</div>
-        <div class="timeline-content">Started learning multiple instruments.</div>
-      </div>
-      <div class="timeline-item right">
-        <div class="timeline-year">2018</div>
-        <div class="timeline-content">Produced first beat.</div>
-      </div>
-      <div class="timeline-item left">
-        <div class="timeline-year">2019</div>
-        <div class="timeline-content">First recorded rap track.</div>
-      </div>
-      <div class="timeline-item right">
-        <div class="timeline-year">2020</div>
-        <div class="timeline-content">Performed at local events.</div>
-      </div>
-      <div class="timeline-item left">
-        <div class="timeline-year">2024</div>
-        <div class="timeline-content">Released singles <strong>“KadhaKali”</strong> and <strong>“Thiripp”</strong>.</div>
-      </div>
-      <div class="timeline-item right">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">Released single <strong>“Kedann Pedayalle”</strong>.</div>
-      </div>
-      <div class="timeline-item left">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">Achieved <strong>60,000+ streams</strong>.</div>
-      </div>
+  <!-- Fan Wall -->
+  <section id="fan-wall" class="section fan-wall">
+    <h2>Fan Wall</h2>
+    <div class="carousel">
+      <div class="slide">“RawSha’s energy is unmatched 🔥”</div>
+      <div class="slide">“Every track feels like a story.”</div>
+      <div class="slide">“Limitless vibes. True inspiration.”</div>
+      <div class="slide">“Hip-hop with soul. Respect.”</div>
     </div>
   </section>
 
@@ -130,3 +96,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
